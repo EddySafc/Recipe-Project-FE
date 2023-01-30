@@ -1,16 +1,8 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  background-color: burlywood;
+  color: rgb(84, 23, 23);
+  padding: 10px;
 }
 
 .App-header {
@@ -24,15 +16,96 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.main-header{
+  font-size: xxx-large;
+  margin: 20px;
+  padding: 30px;
+  padding-bottom: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.random-button{
+  margin: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  
+  font-size: large;
+}
+
+.name-form{
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.name-form-label{
+  font-size: x-large;
+  font:bolder;
+  margin:5px
+}
+
+.name-form-button{
+  border-radius: 5px;
+  font-size: large;
+  padding: 5px;
+}
+
+.name-form-input{
+  margin: 10px;
+  border-radius: 3px;
+}
+
+.all-meals{
+  list-style: none;
+}
+
+.meal-card{
+  background-color: rgb(219, 173, 112);
+  border: 2px black solid;
+  border-radius: 20px;
+  margin: 50px;
+  margin-left: 150px;
+  margin-right: 150px;
+  padding: 40px;
+}
+
+.meal-instructions{
+padding: 20px;
+padding-left: 20px;
+padding-right: 20px;
+font-family:sans-serif;
+}
+
+.meal-image{
+  height: 600px;
+  width: auto;
+  border-radius: 20px;
+}
+
+.ingredients-list{
+  padding-bottom: 40px;
+  list-style: none;
+}
+
+.multi-meal-card{
+  background-color: rgb(219, 173, 112);
+  border: 2px black solid;
+  border-radius: 10px;
+  margin: 30px;
+  padding: 8px;
+  width: 250px
+}
+
+.multi-meal-image{
+  height: 225px;
+  width: auto;
+  border-radius: 10px;
+}
+
+.multi-all-meals{
+  list-style: none;
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
 }
