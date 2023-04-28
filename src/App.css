@@ -2,33 +2,65 @@
   text-align: center;
   background-color: burlywood;
   color: rgb(84, 23, 23);
-  padding: 10px;
+  padding: 0px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+html{
+  background: burlywood no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
+
+
 
 
 .main-header{
   font-size: xxx-large;
   margin: 20px;
-  padding: 30px;
-  padding-bottom: 50px;
+  margin-left: 35px;
+}
+.header-nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:rgb(210, 152, 78);
+  opacity: 0.8;
+  margin-bottom: 40px;
+}
+
+#link{
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: burlywood;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+  font-size: x-large;
+}
+
+#card-link{
+  border: 1px rgba(0, 0, 0, 0.648) solid;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color:  burlywood;
+  border-radius: 8px;
+  padding: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  font-size: medium;
+  border: 2px, solid, black;
 }
 
 .random-button{
   margin: 10px;
   border-radius: 5px;
   padding: 5px;
-  
   font-size: large;
 }
 
@@ -86,6 +118,10 @@ font-family:sans-serif;
   list-style: none;
 }
 
+.shopping-list{
+  list-style: none;
+}
+
 .multi-meal-card{
   background-color: rgb(219, 173, 112);
   border: 2px black solid;
@@ -109,3 +145,4 @@ font-family:sans-serif;
   justify-content: space-evenly;
   flex-direction: row;
 }
+
