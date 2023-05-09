@@ -43,7 +43,7 @@ export const listAllCategories = () => {
 
 export const getSavedRecipes = () => {
   return axios
-    .get(`//192.168.1.25:9090/api/recipes`)
+    .get(`https://calm-gold-angelfish-wig.cyclic.app/api/recipes`)
     .then((recipes) => {
       return recipes;
     })
@@ -55,7 +55,7 @@ export const getSavedRecipes = () => {
 export const saveRecipe = (recipe, recipeId, recipePic) => {
   console.log(recipe, recipeId, recipePic);
   return axios
-    .post(`//192.168.1.25:9090/api/recipes`, {
+    .post(`https://calm-gold-angelfish-wig.cyclic.app/api/recipes`, {
       body: recipe,
       recipe_id: recipeId,
       recipe_pic: recipePic,
@@ -67,7 +67,7 @@ export const saveRecipe = (recipe, recipeId, recipePic) => {
 
 export const getShoppingList = () => {
   return axios
-    .get(`//192.168.1.25:9090/api/shopping_list`)
+    .get(`https://calm-gold-angelfish-wig.cyclic.app/api/shopping_list`)
     .then((ingredients) => {
       return ingredients;
     })
@@ -78,7 +78,7 @@ export const getShoppingList = () => {
 
 export const saveIngredients = (ingredients, measure) => {
   return axios
-    .post(`//192.168.1.25:9090/api/shopping_list`, {
+    .post(`https://calm-gold-angelfish-wig.cyclic.app/api/shopping_list`, {
       body: ingredients,
       measure_body: measure,
     })
@@ -86,3 +86,5 @@ export const saveIngredients = (ingredients, measure) => {
       console.log(err);
     });
 };
+
+//`//192.168.1.25:9090/api/shopping_list`
