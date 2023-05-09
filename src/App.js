@@ -42,15 +42,6 @@ function App() {
             }
           />
           <Route
-            path="/shopping-list"
-            element={
-              <ShoppingList
-                shoppingList={shoppingList}
-                setShoppingList={setShoppingList}
-              />
-            }
-          />
-          <Route
             path="/:idMeal"
             element={
               <SingleRecipe
@@ -70,3 +61,15 @@ function App() {
 }
 
 export default App;
+
+/*
+ <Route
+            path="/shopping-list"
+            element={
+              <ShoppingList
+                shoppingList={shoppingList}
+                setShoppingList={setShoppingList}
+              />
+            }
+          />
+*/

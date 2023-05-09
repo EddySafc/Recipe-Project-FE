@@ -318,9 +318,9 @@ const Recipe = ({ recipe, setRecipe, savedRecipes, setSavedRecipes }) => {
                     </li>
                   ) : null}
                 </ul>
-                <button onClick={handleSaveIngredientsClick}>
+                {/* <button onClick={handleSaveIngredientsClick}>
                   Add Recipe Ingredients to shopping list
-                </button>
+                </button> */}
               </li>
             );
           })}
