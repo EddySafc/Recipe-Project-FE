@@ -10,12 +10,15 @@ const Nav = () => {
         <Link id="link" to={"/saved-recipes"}>
           Saved Recipes
         </Link>
-        <Link id="link" to={"/shopping-list"}>
-          Shopping List
-        </Link>
       </section>
     </nav>
   );
 };
 
 export default Nav;
+
+/*
+<Link id="link" to={"/shopping-list"}>
+          Shopping List
+        </Link>
+*/
