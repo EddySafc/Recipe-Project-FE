@@ -45,6 +45,7 @@ export const getSavedRecipes = () => {
   return axios
     .get(`https://calm-gold-angelfish-wig.cyclic.app/api/recipes`)
     .then((recipes) => {
+      console.log("get recipes:", recipes);
       return recipes;
     })
     .catch((err) => {
@@ -52,13 +53,13 @@ export const getSavedRecipes = () => {
     });
 };
 
-export const saveRecipe = (recipe, recipeId, recipePic) => {
-  console.log(recipe, recipeId, recipePic);
+export const saveRecipe = (recipeId, recipe, recipePic) => {
+  console.log("axios request:", recipeId, recipe, recipePic);
   return axios
     .post(`https://calm-gold-angelfish-wig.cyclic.app/api/recipes`, {
+      id: parseInt(recipeId),
       body: recipe,
-      recipe_id: recipeId,
-      recipe_pic: recipePic,
+      pic: recipePic,
     })
     .catch((err) => {
       console.log(err);

@@ -207,7 +207,13 @@ const Recipe = ({ recipe, setRecipe, savedRecipes, setSavedRecipes }) => {
               <li key={meal.idMeal} className="meal-card">
                 <button
                   onClick={() => {
-                    saveRecipe(meal.strMeal, meal.idMeal, meal.strMealThumb);
+                    console.log(
+                      "button click:",
+                      meal.strMeal,
+                      meal.idMeal,
+                      meal.strMealThumb
+                    );
+                    saveRecipe(meal.idMeal, meal.strMeal, meal.strMealThumb);
                     setButtonCount(buttonCount + 1);
                   }}
                   disabled={true}
@@ -365,7 +371,13 @@ const Recipe = ({ recipe, setRecipe, savedRecipes, setSavedRecipes }) => {
             <li key={meal.idMeal} className="meal-card">
               <button
                 onClick={() => {
-                  saveRecipe(meal.strMeal, meal.idMeal, meal.strMealThumb);
+                  console.log(
+                    "button click:",
+                    meal.strMeal,
+                    meal.idMeal,
+                    meal.strMealThumb
+                  );
+                  saveRecipe(meal.idMeal, meal.strMeal, meal.strMealThumb);
                   setButtonCount(buttonCount + 1);
                 }}
                 disabled={savedRecipes

@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const SavedRecipes = ({ savedRecipes, setSavedRecipes }) => {
   useEffect(() => {
     getSavedRecipes().then((recipes) => {
+      console.log("saved recipes:", savedRecipes);
       setSavedRecipes(recipes.data.result);
     });
   }, [setSavedRecipes]);
