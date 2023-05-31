@@ -16,9 +16,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
-/*
-<Link id="link" to={"/shopping-list"}>
-          Shopping List
-        </Link>
-*/

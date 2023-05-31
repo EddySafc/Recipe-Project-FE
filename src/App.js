@@ -6,13 +6,11 @@ import Nav from "./Components/Nav";
 import Recipe from "./Components/Recipe";
 import SingleRecipe from "./Components/SingleRecipe";
 import SavedRecipes from "./Components/SavedRecipes";
-import ShoppingList from "./Components/ShoppingList";
 
 function App() {
   const [recipe, setRecipe] = useState([]);
   const [savedRecipes, setSavedRecipes] = useState([]);
   const [saveButton, setSaveButton] = useState(false);
-  const [shoppingList, setShoppingList] = useState([]);
   return (
     <BrowserRouter>
       <div className="App">

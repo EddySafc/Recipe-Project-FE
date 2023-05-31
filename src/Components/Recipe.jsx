@@ -4,7 +4,6 @@ import {
   saveRecipe,
   getRecipeByName,
   getRandomRecipe,
-  saveIngredients,
 } from "../requests";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
@@ -31,49 +30,6 @@ const Recipe = ({ recipe, setRecipe, savedRecipes, setSavedRecipes }) => {
   console.log(categories);
   console.log(buttonCount);
   console.log(recipe);
-
-  const handleSaveIngredientsClick = () => {
-    recipe.map((meal) => {
-      return (
-        meal.strIngredient1 !== ""
-          ? saveIngredients(meal.strIngredient1, meal.strMeasure1)
-          : null,
-        meal.strIngredient2 !== ""
-          ? saveIngredients(meal.strIngredient2, meal.strMeasure2)
-          : null,
-        meal.strIngredient3 !== ""
-          ? saveIngredients(meal.strIngredient3, meal.strMeasure3)
-          : null,
-        meal.strIngredient4 !== ""
-          ? saveIngredients(meal.strIngredient4, meal.strMeasure4)
-          : null,
-        meal.strIngredient5 !== ""
-          ? saveIngredients(meal.strIngredient5, meal.strMeasure5)
-          : null,
-        meal.strIngredient6 !== ""
-          ? saveIngredients(meal.strIngredient6, meal.strMeasure6)
-          : null,
-        meal.strIngredient7 !== ""
-          ? saveIngredients(meal.strIngredient7, meal.strMeasure7)
-          : null,
-        meal.strIngredient8 !== ""
-          ? saveIngredients(meal.strIngredient8, meal.strMeasure8)
-          : null,
-        meal.strIngredient9 !== ""
-          ? saveIngredients(meal.strIngredient9, meal.strMeasure9)
-          : null,
-        meal.strIngredient10 !== ""
-          ? saveIngredients(meal.strIngredient10, meal.strMeasure10)
-          : null,
-        meal.strIngredient11 !== ""
-          ? saveIngredients(meal.strIngredient11, meal.strMeasure11)
-          : null,
-        meal.strIngredient12 !== ""
-          ? saveIngredients(meal.strIngredient12, meal.strMeasure12)
-          : null
-      );
-    });
-  };
 
   if (!recipe) {
     return (
@@ -324,9 +280,6 @@ const Recipe = ({ recipe, setRecipe, savedRecipes, setSavedRecipes }) => {
                     </li>
                   ) : null}
                 </ul>
-                {/* <button onClick={handleSaveIngredientsClick}>
-                  Add Recipe Ingredients to shopping list
-                </button> */}
               </li>
             );
           })}
@@ -492,9 +445,6 @@ const Recipe = ({ recipe, setRecipe, savedRecipes, setSavedRecipes }) => {
                   </li>
                 ) : null}
               </ul>
-              {/* <button onClick={handleSaveIngredientsClick}>
-                Add Recipe Ingredients to shopping list
-              </button> */}
             </li>
           );
         })}

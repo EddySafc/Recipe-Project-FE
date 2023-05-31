@@ -1,11 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import {
-  getRecipeById,
-  saveRecipe,
-  getSavedRecipes,
-  saveIngredients,
-} from "../requests";
+import { getRecipeById, saveRecipe, getSavedRecipes } from "../requests";
 
 const SingleRecipe = ({ recipe, setRecipe, savedRecipes, setSavedRecipes }) => {
   const { idMeal } = useParams();
@@ -19,67 +14,6 @@ const SingleRecipe = ({ recipe, setRecipe, savedRecipes, setSavedRecipes }) => {
       setSavedRecipes(recipes.data.result);
     });
   }, [idMeal, setRecipe, setSavedRecipes, buttonCount]);
-
-  console.log(buttonCount);
-  const handleSaveIngredientsClick = () => {
-    recipe.map((meal) => {
-      return (
-        meal.strIngredient1 !== ""
-          ? saveIngredients(meal.strIngredient1, meal.strMeasure1)
-          : null,
-        meal.strIngredient2 !== ""
-          ? saveIngredients(meal.strIngredient2, meal.strMeasure2)
-          : null,
-        meal.strIngredient3 !== ""
-          ? saveIngredients(meal.strIngredient3, meal.strMeasure3)
-          : null,
-        meal.strIngredient4 !== ""
-          ? saveIngredients(meal.strIngredient4, meal.strMeasure4)
-          : null,
-        meal.strIngredient5 !== ""
-          ? saveIngredients(meal.strIngredient5, meal.strMeasure5)
-          : null,
-        meal.strIngredient6 !== ""
-          ? saveIngredients(meal.strIngredient6, meal.strMeasure6)
-          : null,
-        meal.strIngredient7 !== ""
-          ? saveIngredients(meal.strIngredient7, meal.strMeasure7)
-          : null,
-        meal.strIngredient8 !== ""
-          ? saveIngredients(meal.strIngredient8, meal.strMeasure8)
-          : null,
-        meal.strIngredient9 !== ""
-          ? saveIngredients(meal.strIngredient9, meal.strMeasure9)
-          : null,
-        meal.strIngredient10 !== ""
-          ? saveIngredients(meal.strIngredient10, meal.strMeasure10)
-          : null,
-        meal.strIngredient11 !== ""
-          ? saveIngredients(meal.strIngredient11, meal.strMeasure11)
-          : null,
-        meal.strIngredient12 !== ""
-          ? saveIngredients(meal.strIngredient12, meal.strMeasure12)
-          : null
-      );
-    });
-  };
-
-  // const IdArray = [];
-  // savedRecipes.forEach((meal) => {
-  //   IdArray.push(Number(meal.recipe_id));
-  // });
-
-  // const IdArray = savedRecipes.map((meal) => {
-  //   return Number(meal.recipe_id);
-  // });
-
-  // if (recipe.length > 0) {
-  //   console.log(
-  //     IdArray,
-  //     Number(recipe[0].idMeal),
-  //     IdArray.includes(Number(recipe[0].idMeal))
-  //   );
-  // }
 
   if (buttonCount > 0) {
     return (
@@ -207,9 +141,6 @@ const SingleRecipe = ({ recipe, setRecipe, savedRecipes, setSavedRecipes }) => {
                     </li>
                   ) : null}
                 </ul>
-                {/* <button onClick={handleSaveIngredientsClick}>
-                  Add Recipe Ingredients to shopping list
-                </button> */}
               </li>
             );
           })}
@@ -340,9 +271,6 @@ const SingleRecipe = ({ recipe, setRecipe, savedRecipes, setSavedRecipes }) => {
                     </li>
                   ) : null}
                 </ul>
-                {/* <button onClick={handleSaveIngredientsClick}>
-                Add Recipe Ingredients to shopping list
-              </button> */}
               </li>
             );
           })}
